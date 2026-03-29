@@ -11,3 +11,17 @@ document.getElementById('jumiaSearch').addEventListener('input', function(e) {
         }
     });
 });
+function startCountdown() {
+    const banner = document.getElementById('flashSaleTimer');
+    let time = 3600; // 1 hour in seconds
+
+    setInterval(() => {
+        let mins = Math.floor(time / 60);
+        let secs = time % 60;
+        banner.innerHTML = `FLASH SALES - 50% OFF | Ends In: ${mins}:${secs < 10 ? '0' : ''}${secs}`;
+        if (time > 0) time--;
+    }, 1000);
+}
+startCountdown();
+
+// Your existing search logic here...
