@@ -1,117 +1,85 @@
-/* --- ADVANCED UI ENHANCEMENTS --- */
+/* --- MOBILE RESPONSIVE ENHANCEMENTS --- */
 
-/* 1. OFFICIAL STORE BADGE */
-.official-badge {
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    background: #eef2ff;
-    color: #3f51b5;
-    padding: 4px 10px;
-    border-radius: 20px;
-    font-size: 10px;
-    font-weight: 800;
-    text-transform: uppercase;
-    margin-bottom: 8px;
-    border: 1px solid rgba(63, 81, 181, 0.1);
-}
-.official-badge i { font-size: 14px; }
+@media (max-width: 768px) {
+    /* 1. Adjust Floating Chat for Mobile */
+    .floating-chat {
+        bottom: 20px;
+        right: 20px;
+        padding: 10px 16px;
+        font-size: 13px;
+    }
+    .floating-chat span {
+        display: none; /* Hide text on very small screens to save space */
+    }
+    .floating-chat::after {
+        content: 'Chat'; /* Add shorter text for mobile */
+        display: inline-block;
+    }
 
-/* 2. FLOATING WHATSAPP HELP CHAT */
-.floating-chat {
-    position: fixed;
-    bottom: 30px;
-    right: 30px;
-    background: #25D366;
-    color: white;
-    padding: 14px 24px;
-    border-radius: 50px;
-    text-decoration: none;
-    box-shadow: 0 10px 25px rgba(37, 211, 102, 0.4);
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    font-weight: 700;
-    z-index: 2000;
-    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-}
-.floating-chat:hover {
-    transform: scale(1.1) translateY(-10px);
-    background: #128C7E;
-    box-shadow: 0 15px 30px rgba(18, 140, 126, 0.5);
-}
+    /* 2. Responsive Grid for Products */
+    .jumia-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 items per row instead of 1 */
+        gap: 10px;
+        padding: 5px;
+    }
 
-/* 3. HEART / WISHLIST BUTTON */
-.wishlist-btn {
-    position: absolute;
-    top: 12px;
-    left: 12px;
-    z-index: 15;
-    background: rgba(255, 255, 255, 0.9);
-    width: 36px;
-    height: 36px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    cursor: pointer;
-    transition: var(--transition);
-    color: #313133;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
-.wishlist-btn:hover {
-    background: #ffefef;
-    color: #ff4d4d;
-    transform: scale(1.1);
+    /* 3. Adjust Card scaling */
+    .item-card img {
+        height: 140px; /* Smaller images for mobile */
+    }
+
+    .info .name {
+        font-size: 12px;
+        height: 34px;
+    }
+
+    .info .price {
+        font-size: 15px;
+    }
+
+    /* 4. Trust Badges - Stack them or scroll them */
+    .trust-badges {
+        grid-template-columns: 1fr; /* Stack vertically on phones */
+        padding: 15px;
+        gap: 15px;
+    }
+
+    /* 5. Header adjustments */
+    .logo {
+        font-size: 20px;
+    }
+    
+    .user-menu span {
+        font-size: 12px;
+    }
+
+    /* 6. Wishlist Button size */
+    .wishlist-btn {
+        width: 30px;
+        height: 30px;
+        top: 8px;
+        left: 8px;
+    }
 }
 
-/* 4. TRUST BADGES SECTION */
-.trust-badges {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-    background: var(--white);
-    padding: 30px 20px;
-    margin: 40px 0;
-    border-radius: 12px;
-    box-shadow: var(--shadow);
-}
-.trust-item {
-    text-align: center;
-}
-.trust-item i {
-    font-size: 32px;
-    color: var(--jumia-orange);
-    margin-bottom: 10px;
-}
-.trust-item p {
-    font-size: 13px;
-    font-weight: 700;
-    margin: 0;
-    color: var(--jumia-dark);
+/* --- EXTRA POLISH FOR THE UI --- */
+
+/* Smooth Card Entrance */
+.item-card {
+    animation: fadeIn 0.5s ease-in-out;
 }
 
-/* 5. RECENTLY VIEWED SLIDER */
-.recent-viewed {
-    margin: 40px 0;
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
 }
-.recent-viewed h3 {
-    font-size: 18px;
-    margin-bottom: 20px;
-    padding-bottom: 10px;
-    border-bottom: 2px solid #ddd;
+
+/* Touch-friendly buttons */
+.buy-btn {
+    min-height: 44px; /* Standard touch target size */
 }
-.recent-grid {
-    display: flex;
-    gap: 15px;
-    overflow-x: auto;
-    padding-bottom: 10px;
-}
-.small-card {
-    min-width: 120px;
-    background: white;
-    padding: 10px;
-    border-radius: 8px;
-    text-align: center;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+
+/* Stock bar glow effect */
+.progress {
+    box-shadow: 0 0 8px rgba(246, 139, 30, 0.4);
 }
