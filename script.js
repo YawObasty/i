@@ -119,3 +119,38 @@ document.querySelectorAll('.cat-item').forEach(item => {
         // You could add logic here to filter the product grid!
     });
 });
+// --- JUMIA STYLE LIVE SEARCH ---
+const searchInput = document.getElementById('jumiaSearch');
+const searchButton = document.querySelector('.search-container button');
+
+function performSearch() {
+    const filter = searchInput.value.toLowerCase();
+    const cards = document.querySelectorAll('.app-card');
+    let foundCount = 0;
+
+    cards.forEach(card => {
+        const productName = card.querySelector('.product-name').innerText.toLowerCase();
+        
+        if (productName.includes(filter)) {
+            card.style.display = ""; // Show
+            card.style.animation = "fadeIn 0.3s ease";
+            foundCount++;
+        } else {
+            card.style.display = "none"; // Hide
+        }
+    });
+
+    // Optional: Update the section header to show results count
+    const sectionTitle = document.querySelector('.section-header h3');
+    if (filter !== "") {
+        sectionTitle.innerText = `Search Results (${foundCount})`;
+    } else {
+        sectionTitle.innerText = "Top Selling Items";
+    }
+}
+
+// Search as you type
+searchInput.addEventListener('keyup', performSearch);
+
+// Search when clicking the orange button
+searchButton.addEventListener('click', performSearch);
