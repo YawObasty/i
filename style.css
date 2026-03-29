@@ -1,20 +1,21 @@
-/* --- NEW ADVANCED FEATURES --- */
+/* --- ADVANCED UI ENHANCEMENTS --- */
 
 /* 1. OFFICIAL STORE BADGE */
 .official-badge {
     display: inline-flex;
     align-items: center;
-    gap: 4px;
+    gap: 6px;
     background: #eef2ff;
     color: #3f51b5;
-    padding: 2px 8px;
-    border-radius: 10px;
+    padding: 4px 10px;
+    border-radius: 20px;
     font-size: 10px;
     font-weight: 800;
     text-transform: uppercase;
     margin-bottom: 8px;
+    border: 1px solid rgba(63, 81, 181, 0.1);
 }
-.official-badge i { font-size: 12px; }
+.official-badge i { font-size: 14px; }
 
 /* 2. FLOATING WHATSAPP HELP CHAT */
 .floating-chat {
@@ -23,72 +24,94 @@
     right: 30px;
     background: #25D366;
     color: white;
-    padding: 12px 24px;
+    padding: 14px 24px;
     border-radius: 50px;
     text-decoration: none;
-    box-shadow: 0 8px 20px rgba(37, 211, 102, 0.3);
+    box-shadow: 0 10px 25px rgba(37, 211, 102, 0.4);
     display: flex;
     align-items: center;
     gap: 10px;
-    font-weight: bold;
+    font-weight: 700;
     z-index: 2000;
-    transition: var(--transition);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 .floating-chat:hover {
-    transform: scale(1.05) translateY(-5px);
+    transform: scale(1.1) translateY(-10px);
     background: #128C7E;
+    box-shadow: 0 15px 30px rgba(18, 140, 126, 0.5);
 }
 
-/* 3. HEART / SAVED ICON */
+/* 3. HEART / WISHLIST BUTTON */
 .wishlist-btn {
     position: absolute;
-    top: 10px;
-    left: 10px;
+    top: 12px;
+    left: 12px;
     z-index: 15;
-    background: rgba(255, 255, 255, 0.8);
-    width: 32px;
-    height: 32px;
+    background: rgba(255, 255, 255, 0.9);
+    width: 36px;
+    height: 36px;
     display: flex;
     align-items: center;
     justify-content: center;
     border-radius: 50%;
     cursor: pointer;
     transition: var(--transition);
-    color: var(--jumia-dark);
+    color: #313133;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 .wishlist-btn:hover {
-    background: var(--white);
+    background: #ffefef;
     color: #ff4d4d;
+    transform: scale(1.1);
 }
 
-/* 4. PROGRESS BAR (STOCK) IMPROVEMENTS */
-.stock-container {
-    margin-top: 12px;
-    padding-top: 8px;
-    border-top: 1px dashed #eee;
+/* 4. TRUST BADGES SECTION */
+.trust-badges {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    background: var(--white);
+    padding: 30px 20px;
+    margin: 40px 0;
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+}
+.trust-item {
+    text-align: center;
+}
+.trust-item i {
+    font-size: 32px;
+    color: var(--jumia-orange);
+    margin-bottom: 10px;
+}
+.trust-item p {
+    font-size: 13px;
+    font-weight: 700;
+    margin: 0;
+    color: var(--jumia-dark);
 }
 
-.stock-bar {
-    background: #eee;
-    height: 6px;
-    border-radius: 10px;
-    overflow: hidden;
+/* 5. RECENTLY VIEWED SLIDER */
+.recent-viewed {
+    margin: 40px 0;
 }
-
-.progress {
-    background: linear-gradient(90deg, var(--jumia-orange), #ff4d4d);
-    height: 100%;
-    border-radius: 10px;
+.recent-viewed h3 {
+    font-size: 18px;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #ddd;
 }
-
-/* 5. SKELETON LOADING EFFECT (For placeholders) */
-.skeleton {
-    background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
-    background-size: 200% 100%;
-    animation: skeleton-loading 1.5s infinite;
+.recent-grid {
+    display: flex;
+    gap: 15px;
+    overflow-x: auto;
+    padding-bottom: 10px;
 }
-
-@keyframes skeleton-loading {
-    0% { background-position: 200% 0; }
-    100% { background-position: -200% 0; }
+.small-card {
+    min-width: 120px;
+    background: white;
+    padding: 10px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
 }
