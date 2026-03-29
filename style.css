@@ -89,3 +89,79 @@ body { background: var(--jumia-bg); margin: 0; }
         box-shadow: 0 2px 4px rgba(0,0,0,0.05);
     }
 }
+/* --- JUMIA APP BUY BUTTON --- */
+.buy-btn-app {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background: var(--jumia-orange);
+    color: white;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 14px;
+    padding: 12px;
+    border-radius: 4px;
+    margin-top: 10px;
+    transition: background 0.3s;
+    width: 100%;
+}
+
+.buy-btn-app:hover {
+    background: #e67e17;
+}
+
+.buy-btn-app i {
+    font-size: 18px;
+}
+
+/* --- MOBILE TWEAK (The "Nice" Arrangement) --- */
+@media (max-width: 768px) {
+    .buy-btn-app {
+        padding: 8px;
+        font-size: 12px;
+        border-radius: 20px; /* Rounded pill style on mobile */
+        margin-top: 5px;
+    }
+    
+    /* Optional: Hide the text on very small screens to keep it tidy */
+    @media (max-width: 350px) {
+        .buy-btn-app span {
+            display: none;
+        }
+        .buy-btn-app {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            float: right;
+        }
+    }
+}
+
+/* --- TRUST BADGES ARRANGEMENT --- */
+.trust-badges-app {
+    display: flex;
+    justify-content: space-between;
+    background: white;
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 4px;
+    border: 1px solid #eee;
+}
+
+.trust-item {
+    text-align: center;
+    flex: 1;
+}
+
+.trust-item i {
+    font-size: 24px;
+    color: var(--jumia-orange);
+    margin-bottom: 5px;
+}
+
+.trust-item p {
+    font-size: 10px;
+    font-weight: 800;
+    color: var(--jumia-dark);
+}
