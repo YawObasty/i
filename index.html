@@ -3,78 +3,73 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Obasty | Premium Marketplace</title>
+    <title>Obasty | Universal App</title>
     <link rel="stylesheet" href="style.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
 
-    <nav class="glass-nav">
-        <div class="nav-content">
-            <div class="logo-brand">OBASTY<span>.</span></div>
-            <div class="nav-links">
-                <a href="#" class="active">Explore</a>
-                <a href="#">Services</a>
-                <a href="#">Sell</a>
+    <div class="app-shell">
+        
+        <header class="app-header">
+            <div class="top-row">
+                <h1 class="logo">Obasty<span>.</span></h1>
+                <div class="header-btns">
+                    <i class='bx bx-bell'></i>
+                    <i class='bx bx-cart-alt'></i>
+                </div>
             </div>
-            <div class="nav-actions">
+            <div class="search-box">
                 <i class='bx bx-search'></i>
-                <button class="btn-primary">Sign In</button>
+                <input type="text" placeholder="Search services...">
             </div>
-        </div>
-    </nav>
+        </header>
 
-    <header class="hero-section">
-        <h1>Discover Premium <br><span>Digital Services.</span></h1>
-        <p>Expert graphic design, ICT solutions, and hardware repairs at your fingertips.</p>
-        <div class="hero-search">
-            <input type="text" placeholder="Search for 'Logo Design' or 'Windows Setup'...">
-            <button>Find Now</button>
-        </div>
-    </header>
+        <main class="app-content">
+            <div class="category-scroll">
+                <span class="chip active">All</span>
+                <span class="chip">Logos</span>
+                <span class="chip">IT Setup</span>
+                <span class="chip">Hardware</span>
+                <span class="chip">Lessons</span>
+            </div>
 
-    <main class="main-container">
-        <div class="filter-bar">
-            <button class="chip active">All</button>
-            <button class="chip">Designs</button>
-            <button class="chip">IT Support</button>
-            <button class="chip">Hardware</button>
-        </div>
-
-        <div class="premium-grid">
-            <div class="pro-card">
-                <div class="card-image">
-                    <img src="https://via.placeholder.com/400x300" alt="Service">
-                    <span class="category-tag">Design</span>
-                </div>
-                <div class="card-info">
-                    <h3>Professional Minimalist Logo</h3>
-                    <div class="price-row">
-                        <span class="price-tag">GH₵ 80.00</span>
-                        <div class="rating"><i class='bx bxs-star'></i> 4.9</div>
+            <div class="feed-grid">
+                <div class="feed-card">
+                    <div class="card-img">
+                        <img src="https://via.placeholder.com/400x400" alt="Design">
+                        <div class="price-tag">GH₵ 80</div>
                     </div>
-                    <p>High-resolution vector files and 3 revisions included.</p>
-                    <button class="btn-outline">View Details</button>
-                </div>
-            </div>
-
-            <div class="pro-card">
-                <div class="card-image">
-                    <img src="https://via.placeholder.com/400x300" alt="Service">
-                    <span class="category-tag">IT Support</span>
-                </div>
-                <div class="card-info">
-                    <h3>Windows 11 Pro Activation</h3>
-                    <div class="price-row">
-                        <span class="price-tag">GH₵ 50.00</span>
-                        <div class="rating"><i class='bx bxs-star'></i> 5.0</div>
+                    <div class="card-body">
+                        <h3>Professional Logo Design</h3>
+                        <p>High-quality branding for your business.</p>
+                        <button class="action-btn">Order Now</button>
                     </div>
-                    <p>Complete OS setup, drivers installation, and backup.</p>
-                    <button class="btn-outline">View Details</button>
+                </div>
+
+                <div class="feed-card">
+                    <div class="card-img">
+                        <img src="https://via.placeholder.com/400x400" alt="ICT">
+                        <div class="price-tag">GH₵ 50</div>
+                    </div>
+                    <div class="card-body">
+                        <h3>Windows 11 Installation</h3>
+                        <p>Clean setup with all drivers included.</p>
+                        <button class="action-btn">Book Service</button>
+                    </div>
                 </div>
             </div>
-        </div>
-    </main>
+        </main>
+
+        <nav class="bottom-bar">
+            <a href="#" class="nav-item active"><i class='bx bxs-home-circle'></i></a>
+            <a href="#" class="nav-item"><i class='bx bx-category'></i></a>
+            <a href="#" class="nav-item plus"><i class='bx bx-plus'></i></a>
+            <a href="#" class="nav-item"><i class='bx bx-message-square-detail'></i></a>
+            <a href="#" class="nav-item"><i class='bx bx-user'></i></a>
+        </nav>
+
+    </div>
 
 </body>
 </html>
