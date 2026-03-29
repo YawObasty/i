@@ -3,73 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NanaObasty Clone</title>
+    <title>Obasty Marketplace | Designs & Tech</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
 
-    <header class="top-nav">
-        <div class="menu-icon"><i class="fas fa-bars"></i></div>
-        <div class="logo">NanaObasty</div>
-        <div class="nav-right">
-            <i class="fas fa-search"></i>
-            <i class="fas fa-user"></i>
+    <nav class="navbar">
+        <div class="container">
+            <h1 class="logo">Obasty<span>.com</span></h1>
+            <div class="search-bar">
+                <input type="text" placeholder="Search for designs, laptops, or services...">
+                <button>Search</button>
+            </div>
         </div>
-    </header>
+    </nav>
 
-    <section class="hero">
-        <div class="search-container">
-            <input type="text" placeholder="What are you looking for?">
-            <button><i class="fas fa-search"></i></button>
-        </div>
+    <section class="categories container">
+        <div class="category-item">Graphic Design</div>
+        <div class="category-item">Laptop Repair</div>
+        <div class="category-item">Programming</div>
+        <div class="category-item">Education</div>
     </section>
 
-    <div class="container">
-        <div class="section-header">
-            <h3>Browse categories</h3>
-            <a href="#">See all</a>
-        </div>
-        <div class="category-grid">
-            <div class="cat-card"><i class="fas fa-car"></i><span>Vehicles</span></div>
-            <div class="cat-card"><i class="fas fa-home"></i><span>Property</span></div>
-            <div class="cat-card"><i class="fas fa-mobile-alt"></i><span>Electronics</span></div>
-            <div class="cat-card"><i class="fas fa-tshirt"></i><span>Fashion</span></div>
-        </div>
-
-        <div class="section-header">
-            <h3>Promoted Ads</h3>
-        </div>
-        <div class="ad-list">
-            <div class="ad-item">
-                <div class="ad-image" style="background-image: url('https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?q=80&w=200&auto=format&fit=crop');"></div>
-                <div class="ad-details">
-                    <p class="ad-title">Samsung Galaxy S22 Ultra</p>
-                    <p class="ad-location">Accra, Mobile Phones</p>
-                    <p class="ad-price">GH₵ 5,500</p>
-                    <span class="badge">MEMBER</span>
-                </div>
-            </div>
+    <main class="container">
+        <h2 class="section-title">Fresh Recommendations</h2>
+        <div class="product-grid">
             
-            <div class="ad-item">
-                <div class="ad-image" style="background-image: url('https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?q=80&w=200&auto=format&fit=crop');"></div>
-                <div class="ad-details">
-                    <p class="ad-title">Toyota Corolla 2015</p>
-                    <p class="ad-location">Kumasi, Cars</p>
-                    <p class="ad-price">GH₵ 85,000</p>
-                    <span class="badge">TOP AD</span>
+            <div class="card">
+                <div class="card-image" style="background-image: url('https://via.placeholder.com/300x200');"></div>
+                <div class="card-info">
+                    <p class="price">GH₵ 150</p>
+                    <h3 class="title">Professional Event Flyer Design</h3>
+                    <p class="location">Accra, Ghana</p>
                 </div>
             </div>
-        </div>
-    </div>
 
-    <nav class="bottom-nav">
-        <a href="#" class="active"><i class="fas fa-home"></i><span>Home</span></a>
-        <a href="#"><i class="fas fa-list"></i><span>Ads</span></a>
-        <a href="#" class="post-plus"><i class="fas fa-plus-circle"></i><span>Post Ad</span></a>
-        <a href="#"><i class="fas fa-comment"></i><span>Chat</span></a>
-        <a href="#"><i class="fas fa-user"></i><span>My Account</span></a>
-    </nav>
+            <div class="card">
+                <div class="card-image" style="background-image: url('https://via.placeholder.com/300x200');"></div>
+                <div class="card-info">
+                    <p class="price">GH₵ 2,500</p>
+                    <h3 class="title">Toshiba Core i5 Laptop - Clean</h3>
+                    <p class="location">Kumasi, Ghana</p>
+                </div>
+            </div>
+
+            </div>
+    </main>
 
 </body>
 </html>
