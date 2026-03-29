@@ -37,7 +37,7 @@
 
         <section class="content">
             <div class="hero-banner">
-                <h2>FLASH SALES - 50% OFF DESIGNS</h2>
+                <h2 id="flashSaleTimer">FLASH SALES - 50% OFF DESIGNS</h2>
             </div>
 
             <div class="product-wrapper">
@@ -52,8 +52,22 @@
                         <img src="https://via.placeholder.com/200" alt="Design">
                         <div class="info">
                             <p class="name">Custom Professional Logo</p>
+                            
+                            <div class="rating" style="color: #f68b1e; font-size: 12px; margin-bottom: 5px;">
+                                <i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star-half'></i>
+                                <span style="color: #888;">(12)</span>
+                            </div>
+
                             <p class="price">GH₵ 80.00</p>
                             <p class="old-price">GH₵ 100.00</p>
+
+                            <div class="stock-container" style="margin-top: 10px;">
+                                <div class="stock-bar" style="background: #eee; height: 6px; border-radius: 3px; overflow: hidden;">
+                                    <div class="progress" style="background: #f68b1e; width: 40%; height: 100%;"></div>
+                                </div>
+                                <p style="font-size: 10px; margin-top: 4px; color: #d32f2f; font-weight: bold;">4 items left</p>
+                            </div>
+
                             <a href="https://wa.me/233539547368?text=Hello%20Obasty,%20I%20want%20to%20order%20the%20Logo%20Design" class="buy-btn" target="_blank">
                                 <i class='bx bxl-whatsapp'></i> BUY NOW
                             </a>
@@ -64,7 +78,21 @@
                         <img src="https://via.placeholder.com/200" alt="Tech">
                         <div class="info">
                             <p class="name">Windows 11 OS Setup</p>
+                            
+                            <div class="rating" style="color: #f68b1e; font-size: 12px; margin-bottom: 5px;">
+                                <i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bx-star'></i>
+                                <span style="color: #888;">(8)</span>
+                            </div>
+
                             <p class="price">GH₵ 50.00</p>
+
+                            <div class="stock-container" style="margin-top: 10px;">
+                                <div class="stock-bar" style="background: #eee; height: 6px; border-radius: 3px; overflow: hidden;">
+                                    <div class="progress" style="background: #f68b1e; width: 70%; height: 100%;"></div>
+                                </div>
+                                <p style="font-size: 10px; margin-top: 4px; color: #333;">Unlimited service</p>
+                            </div>
+
                             <a href="https://wa.me/233539547368?text=Hello%20Obasty,%20I%20need%20help%20with%20Windows%20Installation" class="buy-btn" target="_blank">
                                 <i class='bx bxl-whatsapp'></i> BUY NOW
                             </a>
@@ -76,7 +104,21 @@
                         <img src="https://via.placeholder.com/200" alt="Design">
                         <div class="info">
                             <p class="name">Event Flyer Design</p>
+
+                            <div class="rating" style="color: #f68b1e; font-size: 12px; margin-bottom: 5px;">
+                                <i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i>
+                                <span style="color: #888;">(25)</span>
+                            </div>
+
                             <p class="price">GH₵ 60.00</p>
+
+                            <div class="stock-container" style="margin-top: 10px;">
+                                <div class="stock-bar" style="background: #eee; height: 6px; border-radius: 3px; overflow: hidden;">
+                                    <div class="progress" style="background: #f68b1e; width: 20%; height: 100%;"></div>
+                                </div>
+                                <p style="font-size: 10px; margin-top: 4px; color: #d32f2f; font-weight: bold;">2 items left at this price</p>
+                            </div>
+
                             <a href="https://wa.me/233539547368?text=Hello%20Obasty,%20I%20want%20to%20order%20an%20Event%20Flyer" class="buy-btn" target="_blank">
                                 <i class='bx bxl-whatsapp'></i> BUY NOW
                             </a>
@@ -88,33 +130,34 @@
         </section>
     </main>
 
-    <script src="script.js"></script>
     <footer class="footer">
-    <div class="container footer-grid">
-        <div class="footer-col">
-            <h4>About ObastyShop</h4>
-            <p>Your one-stop shop for professional graphic designs, IT consultancy, and hardware solutions in Ghana.</p>
-        </div>
-        <div class="footer-col">
-            <h4>Quick Links</h4>
-            <ul>
-                <li><a href="#">Help Center</a></li>
-                <li><a href="#">Contact Us</a></li>
-                <li><a href="#">Terms & Conditions</a></li>
-            </ul>
-        </div>
-        <div class="footer-col">
-            <h4>Follow Me</h4>
-            <div class="social-links">
-                <a href="#"><i class='bx bxl-facebook-circle'></i></a>
-                <a href="#"><i class='bx bxl-instagram'></i></a>
-                <a href="#"><i class='bx bxl-linkedin-square'></i></a>
+        <div class="container footer-grid">
+            <div class="footer-col">
+                <h4>About ObastyShop</h4>
+                <p>Your one-stop shop for professional graphic designs, IT consultancy, and hardware solutions in Ghana.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#">Help Center</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Terms & Conditions</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Follow Me</h4>
+                <div class="social-links">
+                    <a href="#"><i class='bx bxl-facebook-circle'></i></a>
+                    <a href="#"><i class='bx bxl-instagram'></i></a>
+                    <a href="#"><i class='bx bxl-linkedin-square'></i></a>
+                </div>
             </div>
         </div>
-    </div>
-    <div class="footer-bottom">
-        <p>&copy; 2026 NanaObasty Designs. All Rights Reserved.</p>
-    </div>
-</footer>
+        <div class="footer-bottom">
+            <p>&copy; 2026 NanaObasty Designs. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
