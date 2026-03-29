@@ -6,6 +6,30 @@
     <title>QuickTrade | Buy & Sell Anything</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/dist/css/all.min.css">
+    <style>
+    /* 1. Hide scrollbar for the Category chips */
+    .no-scrollbar::-webkit-scrollbar {
+        display: none;
+    }
+    .no-scrollbar {
+        -ms-overflow-style: none;  /* IE and Edge */
+        scrollbar-width: none;  /* Firefox */
+    }
+
+    /* 2. Custom Smooth Scrolling */
+    html {
+        scroll-behavior: smooth;
+    }
+
+    /* 3. Style the "Phone" container for PC monitors */
+    @media (min-width: 768px) {
+        body {
+            background-color: #1a1a1a; /* Dark background outside the 'phone' */
+            display: flex;
+            justify-content: center;
+        }
+    }
+</style>
 </head>
 <body class="bg-gray-900 font-sans flex justify-center">
 
