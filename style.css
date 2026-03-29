@@ -1,85 +1,134 @@
-/* --- MOBILE RESPONSIVE ENHANCEMENTS --- */
+/* --- PREMIUM MODERN DESIGN (GLASSMORPHISM STYLE) --- */
 
-@media (max-width: 768px) {
-    /* 1. Adjust Floating Chat for Mobile */
+:root {
+    --glass-bg: rgba(255, 255, 255, 0.7);
+    --glass-border: rgba(255, 255, 255, 0.3);
+    --accent-gradient: linear-gradient(135deg, #6e8efb, #a777e3);
+    --dark-text: #1a1a1a;
+    --card-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.1);
+}
+
+/* 1. MINIMALIST VERIFIED TAG */
+.official-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    background: var(--accent-gradient);
+    color: white;
+    padding: 3px 12px;
+    border-radius: 5px; /* Boxy but soft */
+    font-size: 9px;
+    letter-spacing: 1px;
+    font-weight: 700;
+    margin-bottom: 12px;
+    box-shadow: 0 4px 10px rgba(110, 142, 251, 0.3);
+}
+
+/* 2. NEON FLOATING CHAT */
+.floating-chat {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background: #1a1a1a; /* Sleek black */
+    color: #25D366; /* WhatsApp green icon only */
+    width: 60px;
+    height: 60px;
+    border-radius: 18px; /* Squircle shape */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 28px;
+    z-index: 2000;
+    transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    border: 1px solid rgba(255,255,255,0.1);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.floating-chat span { display: none; } /* Clean, icon-only look */
+
+.floating-chat:hover {
+    transform: rotate(10deg) scale(1.1);
+    background: #25D366;
+    color: white;
+}
+
+/* 3. GLASSMORPHISM WISHLIST BUTTON */
+.wishlist-btn {
+    position: absolute;
+    top: 15px;
+    right: 15px; /* Moved to right for a cleaner look */
+    background: var(--glass-bg);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid var(--glass-border);
+    width: 38px;
+    height: 38px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: 0.3s;
+    color: var(--dark-text);
+}
+
+.wishlist-btn:hover {
+    background: #ff4d4d;
+    color: white;
+    border-color: #ff4d4d;
+}
+
+/* 4. SLEEK STEP-LOADING BAR */
+.stock-container {
+    margin-top: 15px;
+}
+
+.stock-bar {
+    background: #f0f0f0;
+    height: 4px; /* Thinner is more modern */
+    border-radius: 2px;
+}
+
+.progress {
+    background: var(--accent-gradient);
+    height: 100%;
+    border-radius: 2px;
+    position: relative;
+}
+
+/* Add a glowing tip to the progress bar */
+.progress::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: -2px;
+    height: 8px;
+    width: 8px;
+    background: #a777e3;
+    border-radius: 50%;
+    box-shadow: 0 0 10px #a777e3;
+}
+
+/* 5. MOBILE OVERRIDE (For that "Nicely on Phone" feel) */
+@media (max-width: 600px) {
+    .jumia-grid {
+        grid-template-columns: 1fr; /* Single column large cards look better in this style */
+        padding: 20px;
+    }
+    
+    .item-card {
+        border-radius: 24px;
+        padding: 15px;
+        background: white;
+        border: 1px solid #f0f0f0;
+    }
+
     .floating-chat {
         bottom: 20px;
         right: 20px;
-        padding: 10px 16px;
-        font-size: 13px;
+        width: 50px;
+        height: 50px;
+        border-radius: 14px;
     }
-    .floating-chat span {
-        display: none; /* Hide text on very small screens to save space */
-    }
-    .floating-chat::after {
-        content: 'Chat'; /* Add shorter text for mobile */
-        display: inline-block;
-    }
-
-    /* 2. Responsive Grid for Products */
-    .jumia-grid {
-        grid-template-columns: repeat(2, 1fr); /* 2 items per row instead of 1 */
-        gap: 10px;
-        padding: 5px;
-    }
-
-    /* 3. Adjust Card scaling */
-    .item-card img {
-        height: 140px; /* Smaller images for mobile */
-    }
-
-    .info .name {
-        font-size: 12px;
-        height: 34px;
-    }
-
-    .info .price {
-        font-size: 15px;
-    }
-
-    /* 4. Trust Badges - Stack them or scroll them */
-    .trust-badges {
-        grid-template-columns: 1fr; /* Stack vertically on phones */
-        padding: 15px;
-        gap: 15px;
-    }
-
-    /* 5. Header adjustments */
-    .logo {
-        font-size: 20px;
-    }
-    
-    .user-menu span {
-        font-size: 12px;
-    }
-
-    /* 6. Wishlist Button size */
-    .wishlist-btn {
-        width: 30px;
-        height: 30px;
-        top: 8px;
-        left: 8px;
-    }
-}
-
-/* --- EXTRA POLISH FOR THE UI --- */
-
-/* Smooth Card Entrance */
-.item-card {
-    animation: fadeIn 0.5s ease-in-out;
-}
-
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(10px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-
-/* Touch-friendly buttons */
-.buy-btn {
-    min-height: 44px; /* Standard touch target size */
-}
-
-/* Stock bar glow effect */
-.progress {
-    box-shadow: 0 0 8px rgba(246, 139, 30, 0.4);
 }
