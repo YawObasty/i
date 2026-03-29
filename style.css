@@ -1,95 +1,184 @@
-/* Ensure the grid looks balanced */
-.jumia-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 12px;
+:root {
+    --jumia-orange: #f68b1e;
+    --jumia-dark: #282828;
+    --bg-gray: #f1f1f2;
+    --white: #ffffff;
+    --shadow: 0 2px 10px rgba(0,0,0,0.08);
+    --transition: all 0.3s ease;
 }
 
-/* Fix for card height and button alignment */
-.item-card {
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background-color: var(--bg-gray);
+    margin: 0;
+    color: #313133;
+}
+
+.container { max-width: 1184px; margin: 0 auto; padding: 0 16px; }
+
+/* 1. STYLISH HEADER (Glass-morphism) */
+.header { 
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    padding: 12px 0; 
+    position: sticky; 
+    top: 0; 
+    z-index: 1000; 
+    box-shadow: var(--shadow);
+}
+
+.nav-flex { display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+
+.logo { 
+    font-size: 26px;
+    letter-spacing: -1px;
+    color: var(--jumia-orange); 
+    font-weight: 900; 
+    margin: 0; 
+}
+.logo span { color: var(--jumia-dark); }
+
+/* 2. PREMIUM SEARCH BAR */
+.search-container { 
+    display: flex; 
+    flex-grow: 1; 
+    position: relative;
+    max-width: 600px;
+}
+.search-container i { position: absolute; left: 14px; top: 14px; color: #75757a; font-size: 18px; }
+
+.search-container input { 
+    width: 100%; 
+    padding: 12px 12px 12px 42px; 
+    border: 1px solid #d1d1d6; 
+    border-radius: 8px; 
+    outline: none;
+    font-size: 14px;
+    transition: var(--transition);
+}
+.search-container input:focus { border-color: var(--jumia-orange); box-shadow: 0 0 0 3px rgba(246, 139, 30, 0.1); }
+
+.search-container button { 
+    background: var(--jumia-orange); 
+    color: white; 
+    border: none; 
+    padding: 0 24px; 
+    font-weight: 600; 
+    cursor: pointer; 
+    border-radius: 0 8px 8px 0; 
+    margin-left: -60px; /* Overlap button slightly for clean look */
+    transition: var(--transition);
+}
+.search-container button:hover { background: #e07b16; box-shadow: 0 4px 12px rgba(246, 139, 30, 0.3); }
+
+/* 3. MODERN SIDEBAR */
+.sidebar { 
+    background: var(--white); 
+    border-radius: 8px; 
+    padding: 8px 0; 
+    height: fit-content; 
+    box-shadow: var(--shadow);
+}
+.sidebar li { 
+    padding: 12px 16px; 
+    cursor: pointer; 
+    transition: var(--transition); 
+    font-size: 14px; 
+    font-weight: 500;
+    display: flex; 
+    align-items: center; 
+    gap: 12px; 
+}
+.sidebar li:hover { color: var(--jumia-orange); background: #fff5eb; padding-left: 20px; }
+
+/* 4. ATTRACTIVE PRODUCT CARDS */
+.jumia-grid { 
+    display: grid; 
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); 
+    gap: 16px; 
+}
+
+.item-card { 
+    background: var(--white); 
+    border-radius: 8px; 
+    padding: 0; /* Remove internal padding for edge-to-edge images */
+    position: relative; 
+    transition: var(--transition);
+    overflow: hidden;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    height: 100%; /* Makes all cards in a row the same height */
-    box-sizing: border-box;
 }
+.item-card:hover { transform: translateY(-6px); box-shadow: 0 12px 24px rgba(0,0,0,0.12); }
 
-/* Make images look consistent */
-.item-card img {
-    width: 100%;
+.item-card img { 
+    width: 100%; 
     height: 180px; 
-    object-fit: contain; /* Prevents stretching your design previews */
-    background: #f8f8f8;
+    object-fit: cover; 
+    background: #fdfdfd;
 }
 
-/* Ensure info takes up available space so button pushes to bottom */
-.info {
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
+.info { padding: 12px; flex-grow: 1; display: flex; flex-direction: column; }
+
+.info .name { font-size: 14px; margin: 0 0 8px; color: #313133; height: 38px; line-height: 1.4; overflow: hidden; }
+.info .price { font-size: 18px; font-weight: 700; color: #313133; margin: 0; }
+.info .old-price { font-size: 12px; text-decoration: line-through; color: #75757a; margin: 2px 0; }
+
+.badge { 
+    position: absolute; 
+    top: 8px; 
+    right: 8px; 
+    background: #ff4d4d; 
+    color: white; 
+    padding: 4px 8px; 
+    font-size: 11px; 
+    font-weight: 700; 
+    border-radius: 4px; 
+    z-index: 10;
 }
 
-/* Header spacing for mobile */
-@media (max-width: 768px) {
-    .nav-flex {
-        flex-wrap: wrap;
-    }
-    .search-container {
-        order: 3; /* Moves search bar below logo/user on small screens */
-        width: 100%;
-        margin-top: 10px;
-    }
-}
-.footer {
-    background-color: #333;
+/* 5. WHATSAPP BUTTON STYLING */
+.buy-btn {
+    background-color: #25D366;
     color: white;
-    padding: 40px 0 20px;
-    margin-top: 50px;
-}
-
-.footer-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 30px;
-}
-
-.footer-col h4 {
-    color: var(--jumia-orange);
-    margin-bottom: 20px;
-    font-size: 16px;
-}
-
-.footer-col ul {
-    list-style: none;
-    padding: 0;
-}
-
-.footer-col ul li {
-    margin-bottom: 10px;
-}
-
-.footer-col a {
-    color: #ccc;
     text-decoration: none;
-    transition: 0.3s;
-}
-
-.footer-col a:hover {
-    color: white;
-}
-
-.social-links {
-    display: flex;
-    gap: 15px;
-    font-size: 24px;
-}
-
-.footer-bottom {
-    text-align: center;
-    border-top: 1px solid #444;
-    margin-top: 30px;
-    padding-top: 20px;
+    padding: 10px;
+    border-radius: 6px;
+    font-weight: 700;
     font-size: 13px;
-    color: #888;
+    margin-top: 12px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    transition: var(--transition);
+}
+.buy-btn:hover { background-color: #128C7E; transform: scale(1.02); }
+
+/* 6. MODERN FOOTER */
+.footer { background-color: var(--jumia-dark); color: #f2f2f2; padding: 60px 0 20px; margin-top: 60px; }
+.footer-col h4 { color: var(--white); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 24px; }
+.footer-col a { font-size: 14px; color: #a1a1a1; transition: var(--transition); }
+.footer-col a:hover { color: var(--jumia-orange); padding-left: 5px; }
+
+.social-links a { 
+    background: #404040; 
+    width: 40px; 
+    height: 40px; 
+    display: inline-flex; 
+    align-items: center; 
+    justify-content: center; 
+    border-radius: 50%; 
+    font-size: 20px; 
+    transition: var(--transition);
+}
+.social-links a:hover { background: var(--jumia-orange); color: white; transform: rotate(15deg); }
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .main-layout { grid-template-columns: 1fr; }
+    .sidebar { display: none; }
+    .nav-flex { flex-wrap: wrap; }
+    .search-container { order: 3; width: 100%; margin-top: 8px; }
+    .search-container button { margin-left: -70px; }
 }
