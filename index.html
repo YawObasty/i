@@ -3,135 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NanaObasty | Shop Designs & Tech</title>
+    <title>Jumia Clone | Online Shopping</title>
     <link rel="stylesheet" href="style.css">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
 
-    <header class="header">
-        <div class="container nav-flex">
-            <h1 class="logo">Obasty<span>Shop</span></h1>
-            <div class="search-container">
-                <i class='bx bx-search'></i>
-                <input type="text" id="jumiaSearch" placeholder="Search products, brands and categories">
+    <header class="main-header">
+        <div class="container navbar">
+            <div class="logo">SHOP<span>EASE</span></div>
+            <div class="search-bar">
+                <input type="text" placeholder="Search products, brands and categories">
                 <button>SEARCH</button>
             </div>
             <div class="user-menu">
-                <span><i class='bx bx-user'></i> Hi, Alexander</span>
-                <span><i class='bx bx-cart'></i> Cart</span>
+                <a href="#"><i class="fa-regular fa-user"></i> Account</a>
+                <a href="#"><i class="fa-solid fa-cart-shopping"></i> Cart</a>
             </div>
         </div>
     </header>
 
-    <main class="main-container">
-        <div class="container layout-wrapper">
-            
-            <aside class="jumia-sidebar">
-                <div class="white-box">
-                    <h4 class="box-title"><i class='bx bx-list-ul'></i> Categories</h4>
-                    <ul class="cat-list">
-                        <li onclick="filterProducts('graphic design')"><i class='bx bx-palette'></i> Graphic Design</li>
-                        <li onclick="filterProducts('windows installation')"><i class='bx bx-laptop'></i> IT Services</li>
-                        <li onclick="filterProducts('hardware repair')"><i class='bx bx-wrench'></i> Repair Works</li>
-                        <li onclick="filterProducts('programming')"><i class='bx bx-code-alt'></i> Programming</li>
-                        <li onclick="filterProducts('education')"><i class='bx bx-book-reader'></i> Education</li>
-                    </ul>
-                </div>
-            </aside>
-
-            <section class="jumia-content">
-                <div class="app-banner">
-                    <h3 id="flashSaleTimer">FLASH SALES - UP TO 50% OFF</h3>
-                </div>
-
-                <div class="jumia-app-grid" id="productGrid">
-                    
-                    <div class="app-card" data-name="logo design">
-                        <div class="card-img-container">
-                            <span class="discount-tag">-20%</span>
-                            <img src="https://via.placeholder.com/300" alt="Design">
-                            <div class="wishlist-btn"><i class='bx bx-heart'></i></div>
-                        </div>
-                        <div class="card-details">
-                            <div class="official-badge"><i class='bx bxs-badge-check'></i> Verified Pro</div>
-                            <p class="product-name">Professional Logo Design - High Quality</p>
-                            <p class="price-now">GH₵ 80.00</p>
-                            <p class="price-old">GH₵ 100.00</p>
-                            <div class="stock-info">
-                                <div class="progress-bg"><div class="progress-fill" style="width: 40%;"></div></div>
-                                <span class="stock-count">4 items left</span>
-                            </div>
-                            <a href="https://wa.me/233539547368" class="buy-btn-app"><i class='bx bxl-whatsapp'></i> BUY NOW</a>
-                        </div>
+    <main class="container">
+        <section class="product-section">
+            <h2>Top Selling Items</h2>
+            <div class="product-grid">
+                <div class="product-card">
+                    <div class="badge">Off 20%</div>
+                    <img src="https://via.placeholder.com/200" alt="Product Name">
+                    <div class="info">
+                        <h3>Wireless Bluetooth Headphones</h3>
+                        <p class="price">₵ 150.00</p>
+                        <p class="old-price">₵ 190.00</p>
                     </div>
+                    <button class="add-to-cart">ADD TO CART</button>
+                </div>
 
-                    <div class="app-card" data-name="windows installation">
-                        <div class="card-img-container">
-                            <img src="https://via.placeholder.com/300" alt="Tech">
-                            <div class="wishlist-btn"><i class='bx bx-heart'></i></div>
-                        </div>
-                        <div class="card-details">
-                            <div class="official-badge"><i class='bx bxs-badge-check'></i> Verified Pro</div>
-                            <p class="product-name">Windows 11 Pro Installation Service</p>
-                            <p class="price-now">GH₵ 50.00</p>
-                            <div class="stock-info">
-                                <div class="progress-bg"><div class="progress-fill" style="width: 80%;"></div></div>
-                                <span class="stock-count">Service Available</span>
-                            </div>
-                            <a href="https://wa.me/233539547368" class="buy-btn-app"><i class='bx bxl-whatsapp'></i> BUY NOW</a>
-                        </div>
+                <div class="product-card">
+                    <img src="https://via.placeholder.com/200" alt="Product Name">
+                    <div class="info">
+                        <h3>Smart Watch Series 7</h3>
+                        <p class="price">₵ 450.00</p>
                     </div>
-
+                    <button class="add-to-cart">ADD TO CART</button>
                 </div>
-
-                <div class="trust-badges-app">
-                    <div class="trust-item"><i class='bx bx-shield-check'></i><p>SECURE</p></div>
-                    <div class="trust-item"><i class='bx bx-timer'></i><p>FAST</p></div>
-                    <div class="trust-item"><i class='bx bx-medal'></i><p>EXPERT</p></div>
-                </div>
-            </section>
-        </div>
+            </div>
+        </section>
     </main>
 
-    <footer class="footer">
-        <div class="container footer-grid">
-            <div class="footer-col">
-                <h4>About ObastyShop</h4>
-                <p>Your one-stop shop for professional graphic designs and IT consultancy in Ghana.</p>
-            </div>
-            <div class="footer-col">
-                <h4>Quick Links</h4>
-                <ul>
-                    <li><a href="#">Help Center</a></li>
-                    <li><a href="#">Contact Us</a></li>
-                </ul>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2026 NanaObasty Designs. All Rights Reserved.</p>
-        </div>
-    </footer>
-
-    <div class="category-overlay" id="categoryMenu">
-        <div class="category-header">
-            <h3>All Categories</h3>
-            <i class='bx bx-x' id="closeCategories"></i>
-        </div>
-        <div class="category-list">
-            <div class="cat-item" onclick="filterProducts('graphic design')"><i class='bx bx-palette'></i> Graphic Design</div>
-            <div class="cat-item" onclick="filterProducts('windows installation')"><i class='bx bx-laptop'></i> IT Services</div>
-            <div class="cat-item" onclick="filterProducts('hardware repair')"><i class='bx bx-wrench'></i> Hardware Repair</div>
-        </div>
-    </div>
-
-    <nav class="bottom-nav">
-        <a href="#" class="nav-item active"><i class='bx bx-home-alt'></i><span>Home</span></a>
-        <a href="#" class="nav-item" id="openCats"><i class='bx bx-list-ul'></i><span>Categories</span></a>
-        <a href="#" class="nav-item"><i class='bx bx-user'></i><span>Account</span></a>
-        <a href="https://wa.me/233539547368" class="nav-item"><i class='bx bx-help-circle'></i><span>Help</span></a>
-    </nav>
-
-    <script src="script.js"></script>
 </body>
 </html>
