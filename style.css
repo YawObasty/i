@@ -186,3 +186,22 @@ body {
 @media (min-width: 769px) {
     .bottom-nav { display: none; } /* Hide on PC */
 }
+/* PC View */
+@media (min-width: 769px) {
+    .main-layout {
+        display: grid;
+        grid-template-columns: 240px 1fr; /* Sidebar on left, Content on right */
+        gap: 20px;
+        padding: 20px 0;
+    }
+}
+
+/* Phone View */
+@media (max-width: 768px) {
+    .sidebar-pc {
+        display: none; /* Hides sidebar on phone */
+    }
+    .main-layout {
+        display: block; /* Content takes full width */
+    }
+}
