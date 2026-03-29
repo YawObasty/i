@@ -3,52 +3,69 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Obasty Marketplace | Designs & Tech</title>
+    <title>Obasty Jumia-Clone | Shop Designs & Tech</title>
     <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
 
-    <nav class="navbar">
-        <div class="container">
-            <h1 class="logo">Obasty<span>.com</span></h1>
-            <div class="search-bar">
-                <input type="text" placeholder="Search for designs, laptops, or services...">
-                <button>Search</button>
+    <header class="header">
+        <div class="container nav-flex">
+            <h1 class="logo">Obasty<span>Shop</span></h1>
+            <div class="search-container">
+                <i class='bx bx-search'></i>
+                <input type="text" id="jumiaSearch" placeholder="Search products, brands and categories">
+                <button>SEARCH</button>
+            </div>
+            <div class="user-menu">
+                <span><i class='bx bx-user'></i> Hi, Alexander</span>
+                <span><i class='bx bx-cart'></i> Cart</span>
             </div>
         </div>
-    </nav>
+    </header>
 
-    <section class="categories container">
-        <div class="category-item">Graphic Design</div>
-        <div class="category-item">Laptop Repair</div>
-        <div class="category-item">Programming</div>
-        <div class="category-item">Education</div>
-    </section>
+    <main class="container main-layout">
+        <aside class="sidebar">
+            <ul>
+                <li><i class='bx bx-palette'></i> Graphic Design</li>
+                <li><i class='bx bx-laptop'></i> IT Services</li>
+                <li><i class='bx bx-code-alt'></i> Programming</li>
+                <li><i class='bx bx-book-reader'></i> Education</li>
+                <li><i class='bx bx-wrench'></i> Hardware Repair</li>
+            </ul>
+        </aside>
 
-    <main class="container">
-        <h2 class="section-title">Fresh Recommendations</h2>
-        <div class="product-grid">
-            
-            <div class="card">
-                <div class="card-image" style="background-image: url('https://via.placeholder.com/300x200');"></div>
-                <div class="card-info">
-                    <p class="price">GH₵ 150</p>
-                    <h3 class="title">Professional Event Flyer Design</h3>
-                    <p class="location">Accra, Ghana</p>
+        <section class="content">
+            <div class="hero-banner">
+                <h2>FLASH SALES - 50% OFF DESIGNS</h2>
+            </div>
+
+            <div class="product-wrapper">
+                <div class="section-header">
+                    <h3>Top Selling Items</h3>
+                </div>
+                <div class="jumia-grid" id="productGrid">
+                    <div class="item-card" data-name="logo design">
+                        <div class="badge">-20%</div>
+                        <img src="https://via.placeholder.com/200" alt="Design">
+                        <div class="info">
+                            <p class="name">Custom Professional Logo</p>
+                            <p class="price">GH₵ 80.00</p>
+                            <p class="old-price">GH₵ 100.00</p>
+                        </div>
+                    </div>
+                    <div class="item-card" data-name="windows installation">
+                        <img src="https://via.placeholder.com/200" alt="Tech">
+                        <div class="info">
+                            <p class="name">Windows 11 OS Setup</p>
+                            <p class="price">GH₵ 50.00</p>
+                        </div>
+                    </div>
                 </div>
             </div>
-
-            <div class="card">
-                <div class="card-image" style="background-image: url('https://via.placeholder.com/300x200');"></div>
-                <div class="card-info">
-                    <p class="price">GH₵ 2,500</p>
-                    <h3 class="title">Toshiba Core i5 Laptop - Clean</h3>
-                    <p class="location">Kumasi, Ghana</p>
-                </div>
-            </div>
-
-            </div>
+        </section>
     </main>
 
+    <script src="script.js"></script>
 </body>
 </html>
