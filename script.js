@@ -85,3 +85,14 @@ window.onload = () => {
     startCountdown();
     showMarketingPopup();
 };
+// Bottom Nav Active State Toggle
+const navItems = document.querySelectorAll('.nav-item');
+
+navItems.forEach(item => {
+    item.addEventListener('click', function() {
+        // Remove active class from all
+        navItems.forEach(i => i.classList.remove('active'));
+        // Add to clicked one
+        this.classList.add('active');
+    });
+});
