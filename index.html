@@ -3,57 +3,78 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Obasty Market | Buy & Sell</title>
+    <title>Obasty | Premium Marketplace</title>
     <link rel="stylesheet" href="style.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
 
-   <div class="container main-layout">
-    
-    <aside class="sidebar">
-        <ul class="category-list">
-            <li><a href="#"><i class="fa-solid fa-apple-whole"></i> Supermarket</a></li>
-            <li><a href="#"><i class="fa-solid fa-mobile-screen"></i> Phones & Tablets</a></li>
-            <li><a href="#"><i class="fa-solid fa-tv"></i> Electronics</a></li>
-            <li><a href="#"><i class="fa-solid fa-shirt"></i> Fashion</a></li>
-            <li><a href="#"><i class="fa-solid fa-laptop"></i> Computing</a></li>
-            <li><a href="#"><i class="fa-solid fa-house-chimney"></i> Home & Office</a></li>
-            <li><a href="#"><i class="fa-solid fa-baby-carriage"></i> Baby Products</a></li>
-            <li><a href="#"><i class="fa-solid fa-gamepad"></i> Gaming</a></li>
-        </ul>
-    </aside>
-
-    <div class="content-area">
-        
-        <section class="hero-banner">
-            <div class="banner-box">
-                <h1>FLASH SALES</h1>
-                <p>Up to 50% Off on Top Tech Brands</p>
-                <button class="shop-now">SHOP NOW</button>
+    <nav class="glass-nav">
+        <div class="nav-content">
+            <div class="logo-brand">OBASTY<span>.</span></div>
+            <div class="nav-links">
+                <a href="#" class="active">Explore</a>
+                <a href="#">Services</a>
+                <a href="#">Sell</a>
             </div>
-        </section>
-
-        <section class="product-section">
-            <div class="section-header">
-                <h2>Top Selling Items</h2>
-                <a href="#" class="see-all">See All ></a>
+            <div class="nav-actions">
+                <i class='bx bx-search'></i>
+                <button class="btn-primary">Sign In</button>
             </div>
-            <div class="product-grid">
-                <div class="product-card">
-                    <div class="badge">-15%</div>
-                    <img src="https://via.placeholder.com/200" alt="Product">
-                    <div class="info">
-                        <h3>Infinix Hot 12 - 128GB - Black</h3>
-                        <p class="price">₵ 1,250.00</p>
-                        <p class="old-price">₵ 1,470.00</p>
+        </div>
+    </nav>
+
+    <header class="hero-section">
+        <h1>Discover Premium <br><span>Digital Services.</span></h1>
+        <p>Expert graphic design, ICT solutions, and hardware repairs at your fingertips.</p>
+        <div class="hero-search">
+            <input type="text" placeholder="Search for 'Logo Design' or 'Windows Setup'...">
+            <button>Find Now</button>
+        </div>
+    </header>
+
+    <main class="main-container">
+        <div class="filter-bar">
+            <button class="chip active">All</button>
+            <button class="chip">Designs</button>
+            <button class="chip">IT Support</button>
+            <button class="chip">Hardware</button>
+        </div>
+
+        <div class="premium-grid">
+            <div class="pro-card">
+                <div class="card-image">
+                    <img src="https://via.placeholder.com/400x300" alt="Service">
+                    <span class="category-tag">Design</span>
+                </div>
+                <div class="card-info">
+                    <h3>Professional Minimalist Logo</h3>
+                    <div class="price-row">
+                        <span class="price-tag">GH₵ 80.00</span>
+                        <div class="rating"><i class='bx bxs-star'></i> 4.9</div>
                     </div>
-                    <button class="add-to-cart">ADD TO CART</button>
+                    <p>High-resolution vector files and 3 revisions included.</p>
+                    <button class="btn-outline">View Details</button>
                 </div>
-                </div>
-        </section>
+            </div>
 
-    </div>
-</div>
+            <div class="pro-card">
+                <div class="card-image">
+                    <img src="https://via.placeholder.com/400x300" alt="Service">
+                    <span class="category-tag">IT Support</span>
+                </div>
+                <div class="card-info">
+                    <h3>Windows 11 Pro Activation</h3>
+                    <div class="price-row">
+                        <span class="price-tag">GH₵ 50.00</span>
+                        <div class="rating"><i class='bx bxs-star'></i> 5.0</div>
+                    </div>
+                    <p>Complete OS setup, drivers installation, and backup.</p>
+                    <button class="btn-outline">View Details</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
 </body>
 </html>
