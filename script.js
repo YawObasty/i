@@ -96,3 +96,26 @@ navItems.forEach(item => {
         this.classList.add('active');
     });
 });
+// Get elements
+const categoryBtn = document.querySelector('.nav-item:nth-child(2)'); // The 2nd icon in bottom-nav
+const categoryMenu = document.getElementById('categoryMenu');
+const closeBtn = document.getElementById('closeCategories');
+
+// Open Menu
+categoryBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+    categoryMenu.classList.add('show');
+});
+
+// Close Menu
+closeBtn.addEventListener('click', () => {
+    categoryMenu.classList.remove('show');
+});
+
+// Close when clicking an item (simulating navigation)
+document.querySelectorAll('.cat-item').forEach(item => {
+    item.addEventListener('click', () => {
+        categoryMenu.classList.remove('show');
+        // You could add logic here to filter the product grid!
+    });
+});
